@@ -53,7 +53,7 @@
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<li>
-									<a href="blog-home-1.html">Blog Home 1</a>
+									<a href="Blog.aspx">Blog</a>
 								</li>
 								<li>
 									<a href="blog-home-2.html">Blog Home 2</a>
@@ -92,6 +92,9 @@
 								</li>
 							</ul>
 						</li>
+						<li>
+							<a href="Login.aspx">Login</a>
+						</li>	
 					</ul>
 				</div>
 				<!-- /.navbar-collapse -->
