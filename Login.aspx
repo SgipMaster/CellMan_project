@@ -5,11 +5,34 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-	<h2>Login</h2>
-	<asp:TextBox ID="username" runat="server"></asp:TextBox><br />
-	<asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox>
+	   <!-- Page Content -->
+    <div class="container">
 
-	    <!-- /.container -->
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">User Login</h1>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li class="active">Full Width Page</li>
+                </ol>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Content Row -->
+        <div class="row">
+            <div class="col-lg-12">
+				<p>Username:</p>
+				<asp:TextBox ID="Username" runat="server"></asp:TextBox><br /><br />
+				<p>Password:</p>
+				<asp:TextBox ID="Password" runat="server" TextMode="Password"></asp:TextBox><br /><br />
+				<asp:Button ID="Submit" runat="server" Text="Login" />
+            </div>
+        </div>
+        <!-- /.row -->
+
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>

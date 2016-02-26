@@ -50,46 +50,39 @@
 							<a href="inventory.aspx">Buy Phones</a>
 						</li>					
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Buy/Sell <b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<li>
-									<a href="Blog.aspx">Blog</a>
+									<a href="Forum.aspx">Forum</a>
 								</li>
 								<li>
 									<a href="blog-home-2.html">Blog Home 2</a>
 								</li>
 								<li>
-									<a href="blog-post.html">Blog Post</a>
+									<a href="pricing.html">Pricing Table</a>
 								</li>
 							</ul>
 						</li>
+						<li>
+							<a href="services.aspx">Services</a>
+						</li>
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages <b class="caret"></b></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Other <b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<li>
-									<a href="about.aspx">About</a>
-								</li>
-								<li>
-									<a href="services.aspx">Services</a>
+									<a href="Forum.aspx">Forum</a>
 								</li>
 								<li>
 									<a href="contact.aspx">Contact</a>
 								</li>
 								<li>
-									<a href="full-width.html">Full Width Page</a>
-								</li>
-								<li>
-									<a href="sidebar.html">Sidebar Page</a>
-								</li>
-								<li>
 									<a href="faq.aspx">FAQ</a>
 								</li>
 								<li>
-									<a href="404.html">404</a>
+									<a href="about.aspx">About</a>
 								</li>
-								<li>
-									<a href="pricing.html">Pricing Table</a>
-								</li>
+
+
 							</ul>
 						</li>
 						<li>

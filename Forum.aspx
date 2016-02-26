@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Blog.aspx.cs" Inherits="Blog" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Forum.aspx.cs" Inherits="Blog" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 	<title>Cell Man-Blog</title>
@@ -10,7 +10,7 @@
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Blog Home One
+                <h1 class="page-header">Forum
                     <small>Subheading</small>
                 </h1>
                 <ol class="breadcrumb">
