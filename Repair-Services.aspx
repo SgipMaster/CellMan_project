@@ -12,11 +12,7 @@
                 <h1 class="page-header">Repair Services
 <%--                    <small>Subheading</small>--%>
                 </h1>
-                <ol class="breadcrumb">
-                    <li><a href="index.html">Home</a>
-                    </li>
-                    <li class="active">Repair Services</li>
-                </ol>
+                <asp:SiteMapPath class="breadcrumb" ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
             </div>
         </div>
         <!-- /.row -->

@@ -1,12 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
     <siteMapNode url="Default.aspx" title="Home"  description="HomePage">
-        <siteMapNode url="Inventory.aspx" title="Buy"  description="Inventory" />
-        <siteMapNode url="Login.aspx" title="Login"  description="Login Page" />
-				<siteMapNode url="Forum.aspx" title="Forum"  description="Forum Home" />
-				<siteMapNode url="" title=""  description="" />
-				<siteMapNode url="" title=""  description="" />
-				<siteMapNode url="" title=""  description="" />
-				<siteMapNode url="" title=""  description="" />
+      <siteMapNode url="Inventory.aspx" title="Buy Devices"  description="Inventory" />
+      <siteMapNode url="Login.aspx" title="Login"  description="Login Page" />
+			<siteMapNode url="Forum.aspx" title="Forum"  description="Forum Home" />
+			<siteMapNode url="Services.aspx" title="Services"  description="Services Home Page" />
+			<siteMapNode url="faq.aspx" title="FAQ"  description="FAQ" />
+			<siteMapNode url="About.aspx" title="About"  description="About Us" />
+			<siteMapNode url="Contact.aspx" title="Contact"  description="Contact Us" />
+			<siteMapNode url="Repair-Request.aspx" title="Repair Request"  description="Make a request for a Repair" />
+			<siteMapNode url="Repair-Track.aspx" title="Repair Track"  description="Track a Repair" />
+			<siteMapNode url="Repair-Services.aspx" title="Repair Service"  description="Repair Services" />
+			<siteMapNode url="Sell-Device.aspx" title="Sell Device"  description="Sell a Device" />
     </siteMapNode>
 </siteMap>
