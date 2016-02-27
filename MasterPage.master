@@ -13,7 +13,7 @@
     <meta name="description" content="MIS 5050 Project" />
     <meta name="author" content="Nathan Silvester & Richard Olivera" />
 	
-    <!-- Bootstrap Core CSS -->x
+    <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Custom CSS -->
@@ -53,9 +53,6 @@
 								<li>
 									<a href="inventory.aspx">Buy </a>
 								</li>	
-<%--								<li>
-									<a href="blog-home-2.html">Blog Home 2</a>
-								</li>--%>
 								<li>
 									<a href="Sell-Device.aspx">Sell</a>
 								</li>
@@ -93,8 +90,6 @@
 								<li>
 									<a href="about.aspx">About</a>
 								</li>
-
-
 							</ul>
 						</li>
 						<li>
