@@ -10,40 +10,40 @@
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Three Column Portfolio
-                    <small>Subheading</small>
+                <h1 class="page-header">Inventory
                 </h1>
                 <asp:SiteMapPath class="breadcrumb" ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
             </div>
         </div>
         <!-- /.row -->
-
+		
+		<!-- LinkButtons will forward to Phone.aspx -->
         <!-- Projects Row -->
         <div class="row">
             <div class="col-md-4 img-portfolio">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
-                </a>
+				<asp:LinkButton ID="LinkButton10" runat="server">
+                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="" />
+                </asp:LinkButton>
                 <h3>
-                    <a href="portfolio-item.html">Project Name</a>
+					<asp:LinkButton ID="LinkButton1" runat="server">Phone Name</asp:LinkButton>
                 </h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
             </div>
             <div class="col-md-4 img-portfolio">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="portfolio-item.html">Project Name</a>
+				<asp:LinkButton ID="LinkButton11" runat="server">
+                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="" />
+                </asp:LinkButton>
+				<h3>
+                    <asp:LinkButton ID="LinkButton2" runat="server">Phone Name</asp:LinkButton>
                 </h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
             </div>
             <div class="col-md-4 img-portfolio">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="portfolio-item.html">Project Name</a>
+ 				<asp:LinkButton ID="LinkButton12" runat="server">
+                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="" />
+                </asp:LinkButton>               
+				<h3>
+                    <asp:LinkButton ID="LinkButton3" runat="server">Phone Name</asp:LinkButton>
                 </h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
             </div>
@@ -53,29 +53,29 @@
         <!-- Projects Row -->
         <div class="row">
             <div class="col-md-4 img-portfolio">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
-                </a>
+				<asp:LinkButton ID="LinkButton13" runat="server">
+                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="" />
+                </asp:LinkButton>
                 <h3>
-                    <a href="portfolio-item.html">Project Name</a>
+                    <asp:LinkButton ID="LinkButton4" runat="server">Phone Name</asp:LinkButton>
                 </h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
             </div>
             <div class="col-md-4 img-portfolio">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
-                </a>
+				<asp:LinkButton ID="LinkButton14" runat="server">
+                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="" />
+                </asp:LinkButton>
                 <h3>
-                    <a href="portfolio-item.html">Project Name</a>
+                    <asp:LinkButton ID="LinkButton5" runat="server">Phone Name</asp:LinkButton>
                 </h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
             </div>
             <div class="col-md-4 img-portfolio">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
-                </a>
+				<asp:LinkButton ID="LinkButton15" runat="server">
+                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="" />
+                </asp:LinkButton>
                 <h3>
-                    <a href="portfolio-item.html">Project Name</a>
+                    <asp:LinkButton ID="LinkButton6" runat="server">Phone Name</asp:LinkButton>
                 </h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
             </div>
@@ -84,29 +84,29 @@
         <!-- Projects Row -->
         <div class="row">
             <div class="col-md-4 img-portfolio">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
-                </a>
+				<asp:LinkButton ID="LinkButton16" runat="server">
+                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="" />
+                </asp:LinkButton>
                 <h3>
-                    <a href="portfolio-item.html">Project Name</a>
+                    <asp:LinkButton ID="LinkButton7" runat="server">Phone Name</asp:LinkButton>
                 </h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
             </div>
             <div class="col-md-4 img-portfolio">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
-                </a>
+				<asp:LinkButton ID="LinkButton17" runat="server">
+                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="" />
+                </asp:LinkButton>
                 <h3>
-                    <a href="portfolio-item.html">Project Name</a>
+                    <asp:LinkButton ID="LinkButton8" runat="server">Phone Name</asp:LinkButton>
                 </h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
             </div>
             <div class="col-md-4 img-portfolio">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
-                </a>
+				<asp:LinkButton ID="LinkButton18" runat="server">
+                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="" />
+                </asp:LinkButton>
                 <h3>
-                    <a href="portfolio-item.html">Project Name</a>
+                    <asp:LinkButton ID="LinkButton9" runat="server">Phone Name</asp:LinkButton>
                 </h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
             </div>
@@ -144,8 +144,6 @@
             </div>
         </div>
     </div>
-    <!-- /.container -->
-
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 

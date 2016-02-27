@@ -8,9 +8,7 @@
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Track Repair
-<%--                    <small>Subheading</small>--%>
-                </h1>
+                <h1 class="page-header">Track Repairs</h1>
                 <asp:SiteMapPath class="breadcrumb" ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
             </div>
         </div>
@@ -21,17 +19,16 @@
             <div class="col-lg-12">
                 <p>Please enter invoice number</p>
                 <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-
+				<asp:Button ID="Button1" runat="server" Text="Submit" />
             </div>
-
-    <!-- /.container -->
-
+		</div>
+	</div>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-      </div>
-      </div>
+      
+      
 </asp:Content>
 
