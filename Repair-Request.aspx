@@ -10,7 +10,6 @@
 				<div class="col-lg-12">
 					<h1 class="page-header">Request Repair
 					</h1>
-					<asp:SiteMapPath class="breadcrumb" ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
 				</div>
 			</div>
 			<!-- /.row -->
@@ -19,11 +18,12 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<p>Please select the type of device</p>
-					<asp:DropDownList ID="DropDownList1" runat="server">
+					<asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="DeviceType" DataValueField="DeviceType">
 						<asp:ListItem></asp:ListItem>
 						<asp:ListItem>Cell Phone</asp:ListItem>
 						<asp:ListItem>Tablet</asp:ListItem>
 					</asp:DropDownList>
+				    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [DeviceType] FROM [Device]"></asp:SqlDataSource>
 				</div>
 				<!-- Will add other drop down list to get more specific repair info -->
 		  </div>
