@@ -20,7 +20,7 @@
         <!-- Image Header -->
         <div class="row">
             <div class="col-lg-12">
-                <img class="img-responsive" src="http://placehold.it/1200x300" alt="" />
+                <img class="img-responsive" src="http://citieshousing.com/wp-content/uploads/2014/11/iPhone-5S-Black-Hand-View-Mockup-1200x3001.jpg" alt="" />
             </div>
         </div>
         <!-- /.row -->
