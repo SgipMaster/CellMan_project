@@ -18,12 +18,15 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<p>Please select the type of device</p>
-					<asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="DeviceType" DataValueField="DeviceType">
+					<asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="TypeName" DataValueField="TypeName">
 						<asp:ListItem></asp:ListItem>
 						<asp:ListItem>Cell Phone</asp:ListItem>
 						<asp:ListItem>Tablet</asp:ListItem>
 					</asp:DropDownList>
-				    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [DeviceType] FROM [Device]"></asp:SqlDataSource>
+				    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [TypeName] FROM [DeviceType]"></asp:SqlDataSource>
+					<asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource2" DataTextField="Name" DataValueField="Name">
+					</asp:DropDownList>
+					<asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Name] FROM [Manufacturer]"></asp:SqlDataSource>
 				</div>
 				<!-- Will add other drop down list to get more specific repair info -->
 		  </div>
