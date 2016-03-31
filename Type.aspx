@@ -22,13 +22,12 @@
         <!-- Projects Row -->
         <div class="row">
 			<br />
-			<asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" RepeatColumns="3" RepeatLayout="Flow">
+			<asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" RepeatColumns="3" RepeatLayout="Flow" >
 				<ItemTemplate>
 					<div class="col-md-4 img-portfolio">
-						<img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="" />
+						<asp:ImageButton ID="ImageButton1" runat="server" OnClick="ImageButton1_Click" class="img-responsive img-hover" src="http://placehold.it/700x400" AlternateText='<%# Bind("TypeName") %>' />
 						<h3>
-							<asp:LinkButton ID="LinkButton1" runat="server" url="Manufacturer.aspx" Text='<%# Bind("TypeName") %>'></asp:LinkButton>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+							<asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" Text='<%# Bind("TypeName") %>'></asp:LinkButton>
 						</h3>
 					</div>
 				</ItemTemplate>

@@ -12,10 +12,18 @@ public partial class Inventory : System.Web.UI.Page
 
 	}
 
-
-	protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
+	protected void LinkButton1_Click(object sender, EventArgs e)
 	{
+		LinkButton clicked = sender as LinkButton;
+		Session["Manufacturer"] = clicked.Text;
+		Response.Redirect("Model.aspx");
+	}
 
+	protected void ImageButton1_Click(object sender, EventArgs e)
+	{
+		ImageButton clicked = sender as ImageButton;
+		Session["Manufacturer"] = clicked.AlternateText;
+		Response.Redirect("Model.aspx");
 	}
 }
 

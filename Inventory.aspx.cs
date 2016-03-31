@@ -15,15 +15,15 @@ public partial class Inventory : System.Web.UI.Page
 	protected void LinkButton1_Click(object sender, EventArgs e)
 	{
 		LinkButton clicked = sender as LinkButton;
-		Session["Type"] = clicked.Text;
-		Response.Redirect("Manufacturer.aspx");
+		Session["Inventory"] = clicked.Text;
+		Response.Redirect("Phone.aspx");
 	}
 
 	protected void ImageButton1_Click(object sender, EventArgs e)
 	{
 		ImageButton clicked = sender as ImageButton;
-		Session["Type"] = clicked.AlternateText;
-		Response.Redirect("Manufacturer.aspx");
+		Session["Inventory"] = clicked.AlternateText;
+		Response.Redirect("Phone.aspx");
 	}
 }
 
