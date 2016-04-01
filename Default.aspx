@@ -6,33 +6,47 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
 	<!-- Header Carousel -->
-    <div id="myCarousel" class="carousel slide">
+    <header id="myCarousel" class="carousel slide">
         <!-- Indicators -->
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
-
+		<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT TOP 1 Image, Model FROM [Inventory] JOIN Device ON Inventory.DeviceID = Device.DeviceID WHERE Condition = 'Perfect' ORDER BY AddDate DESC"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="WITH inv AS ( SELECT ROW_NUMBER() OVER (ORDER BY AddDate DESC) AS RowNumber, Image, Model FROM Inventory JOIN Device ON Inventory.DeviceID = Device.DeviceID WHERE Condition = 'Perfect') SELECT Image, Model FROM inv WHERE RowNumber = 2 "></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="WITH inv AS ( SELECT ROW_NUMBER() OVER (ORDER BY AddDate DESC) AS RowNumber, Image, Model FROM Inventory JOIN Device ON Inventory.DeviceID = Device.DeviceID WHERE Condition = 'Perfect') SELECT Image, Model FROM inv WHERE RowNumber = 3"></asp:SqlDataSource>
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
-                <div class="fill"><asp:Image ID="Image1" runat="server" ImageUrl="http://placehold.it/1900x1080?text=Slide One" /></div>
-                <div class="carousel-caption">
-                    <h2>Caption 1</h2>
-                </div>
+				<asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" RepeatDirection="Horizontal" RepeatLayout="Flow" >
+					<ItemTemplate>
+						<asp:Image ID="Image1" runat="server" CssClass="fill" ImageURL='<%# Eval("Image") %>'/>
+						<h2>
+							<asp:Label ID="Label1" CssClass="carousel-caption" runat="server" Text='<%# Eval("Model") %>'></asp:Label>
+						</h2>
+					</ItemTemplate>
+				</asp:DataList>
             </div>
             <div class="item">
-                <img class="fill" src="http://placehold.it/1900x1080?text=Slide Two" />
-                <div class="carousel-caption">
-                    <h2>Caption 2</h2>
-                </div>
+                <asp:DataList ID="DataList2" runat="server" DataSourceID="SqlDataSource2" RepeatDirection="Horizontal" RepeatLayout="Flow" >
+					<ItemTemplate>
+						<asp:Image ID="Image2" runat="server" CssClass="fill" ImageURL='<%# Eval("Image") %>'/>
+						<h2>
+							<asp:Label ID="Label2" CssClass="carousel-caption" runat="server" Text='<%# Eval("Model") %>'></asp:Label>
+						</h2>
+					</ItemTemplate>
+				</asp:DataList>
             </div>
             <div class="item">
-               <img class="fill" src="http://placehold.it/1900x1080?text=Slide Three" />
-                <div class="carousel-caption">
-                    <h2>Caption 3</h2>
-                </div>
+                <asp:DataList ID="DataList3" runat="server" DataSourceID="SqlDataSource3" RepeatDirection="Horizontal" RepeatLayout="Flow" >
+					<ItemTemplate>
+						<asp:Image ID="Image3" runat="server" CssClass="fill" ImageURL='<%# Eval("Image") %>'/>
+						<h2>
+							<asp:Label ID="Label3" CssClass="carousel-caption" runat="server" Text='<%# Eval("Model") %>'></asp:Label>
+						</h2>
+					</ItemTemplate>
+				</asp:DataList>
             </div>
         </div>
 
@@ -43,7 +57,7 @@
         <a class="right carousel-control" href="#myCarousel" data-slide="next">
             <span class="icon-next"></span>
         </a>
-    </div>
+    </header>
 
     <!-- Page Content -->
     <div class="container">
