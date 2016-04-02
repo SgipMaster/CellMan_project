@@ -10,7 +10,12 @@
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Phone Info</h1>
+                <h1 class="page-header">Phone Info<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT Image , Storage FROM Inventory JOIN Device ON Inventory.DeviceID = Device.DeviceID WHERE InventoryID = @inv">
+					<SelectParameters>
+						<asp:SessionParameter Name="inv" SessionField="Inventory" />
+					</SelectParameters>
+					</asp:SqlDataSource>
+				</h1>
 				<asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
             </div>
         </div>
@@ -18,50 +23,32 @@
 
         <!-- Portfolio Item Row -->
         <div class="row">
-
-            <div class="col-md-8">
-                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                    </ol>
-
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <img class="img-responsive" src="http://placehold.it/750x500" alt="" />
-                        </div>
-                        <div class="item">
-                            <img class="img-responsive" src="http://placehold.it/750x500" alt="" />
-                        </div>
-                        <div class="item">
-                            <img class="img-responsive" src="http://placehold.it/750x500" alt="" />
-                        </div>
-                    </div>
-
-                    <!-- Controls -->
-                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                    </a>
-                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <h3>Phone Description</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
-                <h3>Phone Specifications</h3>
-                <ul>
-                    <li>Lorem Ipsum</li>
-                    <li>Dolor Sit Amet</li>
-                    <li>Consectetur</li>
-                    <li>Adipiscing Elit</li>
-                </ul>
-            </div>
+			<asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1">
+				<ItemTemplate>
+					<div class="col-md-8">
+						<div id="carousel-example-generic" class="carousel slide" >
+							<div class="carousel-inner">
+								<div class="item active">
+									<asp:Image ID="Image1" CssClass="img-responsive" runat="server" ImageURL='<%# Bind("Image") %>'/>
+								</div>
+							 </div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<h3>Phone Description</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
+						<h3>Phone Specifications</h3>
+						<ul>
+							<li>
+								<asp:Label ID="Label1" runat="server" Text='<%# Bind("Storage") %>' ></asp:Label>GB
+							</li>
+							<li>Dolor Sit Amet</li>
+							<li>Consectetur</li>
+							<li>Adipiscing Elit</li>
+						</ul>
+					</div>
+				</ItemTemplate>
+			</asp:DataList>
 
         </div>
         <!-- /.row -->
