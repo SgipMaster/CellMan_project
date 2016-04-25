@@ -19,12 +19,9 @@
 
         <!-- Content Row -->
         <div class="row">
+			<br />
             <div class="col-lg-12">
-				<p>Username:</p>
-				<asp:TextBox ID="Username" runat="server"></asp:TextBox><br /><br />
-				<p>Password:</p>
-				<asp:TextBox ID="Password" runat="server" TextMode="Password"></asp:TextBox><br /><br />
-				<asp:Button ID="Submit" runat="server" Text="Login" />
+				<asp:Login ID="Login1" runat="server" CreateUserText="Need to Register?" CreateUserUrl="~/newuser.aspx" DestinationPageUrl="~/About.aspx" PasswordRecoveryText="Forgot Password?" PasswordRecoveryUrl="~/forgotpassword.aspx"></asp:Login>
 			</div>
         </div>
         <!-- /.row -->
