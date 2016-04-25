@@ -75,7 +75,7 @@
                     </div>
                     <div class="panel-body">
                         <h4>Buy Phones</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p>In need of a new phone? Check out our Inventory!</p>
                         <a href="Type.aspx" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
@@ -90,7 +90,7 @@
                     </div>
                     <div class="panel-body">
                         <h4>Sell Phones</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p>Ready for something new and exciting? Sell us your old phone!</p>
                         <a href="Sell-Device.aspx" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
@@ -105,7 +105,7 @@
                     </div>
                     <div class="panel-body">
                         <h4>Repair Phones</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p>Broken screen? Broken charger port? Let us fix it for you!</p>
                         <a href="Repair-Request.aspx" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
@@ -120,7 +120,7 @@
                     </div>
                     <div class="panel-body">
                         <h4>Buy Parts</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p>Feeling up for the job? Buy parts and fix it yourself!</p>
                         <a href="#" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
