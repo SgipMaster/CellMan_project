@@ -10,19 +10,21 @@
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Phone Info<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT Image , Storage FROM Inventory JOIN Device ON Inventory.DeviceID = Device.DeviceID WHERE InventoryID = @inv">
+                <h1 class="page-header">Phone Info
+					<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT Inventory.Image , Storage FROM Inventory JOIN Device ON Inventory.DeviceID = Device.DeviceID WHERE InventoryID = @inv">
 					<SelectParameters>
 						<asp:SessionParameter Name="inv" SessionField="Inventory" />
 					</SelectParameters>
 					</asp:SqlDataSource>
 				</h1>
-				<asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
+				<asp:SiteMapPath CssClass="breadcrumb" ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
             </div>
         </div>
         <!-- /.row -->
 
         <!-- Portfolio Item Row -->
         <div class="row">
+			<br />
 			<asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1">
 				<ItemTemplate>
 					<div class="col-md-8">

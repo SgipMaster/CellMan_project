@@ -13,15 +13,15 @@
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
-		<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT TOP 1 Image, Model FROM [Inventory] JOIN Device ON Inventory.DeviceID = Device.DeviceID WHERE Condition = 'Perfect' ORDER BY AddDate DESC"></asp:SqlDataSource>
-        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="WITH inv AS ( SELECT ROW_NUMBER() OVER (ORDER BY AddDate DESC) AS RowNumber, Image, Model FROM Inventory JOIN Device ON Inventory.DeviceID = Device.DeviceID WHERE Condition = 'Perfect') SELECT Image, Model FROM inv WHERE RowNumber = 2 "></asp:SqlDataSource>
-        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="WITH inv AS ( SELECT ROW_NUMBER() OVER (ORDER BY AddDate DESC) AS RowNumber, Image, Model FROM Inventory JOIN Device ON Inventory.DeviceID = Device.DeviceID WHERE Condition = 'Perfect') SELECT Image, Model FROM inv WHERE RowNumber = 3"></asp:SqlDataSource>
+		<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT TOP 1 Inventory.Image, Model FROM [Inventory] JOIN Device ON Inventory.DeviceID = Device.DeviceID WHERE Condition = 'Perfect' ORDER BY AddDate DESC"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="WITH inv AS ( SELECT ROW_NUMBER() OVER (ORDER BY AddDate DESC) AS RowNumber, Inventory.Image, Model FROM Inventory JOIN Device ON Inventory.DeviceID = Device.DeviceID WHERE Condition = 'Perfect') SELECT Image, Model FROM inv WHERE RowNumber = 2 "></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="WITH inv AS ( SELECT ROW_NUMBER() OVER (ORDER BY AddDate DESC) AS RowNumber, Inventory.Image, Model FROM Inventory JOIN Device ON Inventory.DeviceID = Device.DeviceID WHERE Condition = 'Perfect') SELECT Image, Model FROM inv WHERE RowNumber = 3"></asp:SqlDataSource>
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
 				<asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" RepeatDirection="Horizontal" RepeatLayout="Flow" >
 					<ItemTemplate>
-						<asp:Image ID="Image1" runat="server" CssClass="fill" ImageURL='<%# Eval("Image") %>'/>
+						<asp:Image ID="Image1" runat="server" Height="300px" CssClass="center-block" ImageURL='<%# Eval("Image") %>'/>
 						<h2>
 							<asp:Label ID="Label1" CssClass="carousel-caption" runat="server" Text='<%# Eval("Model") %>'></asp:Label>
 						</h2>
@@ -31,7 +31,7 @@
             <div class="item">
                 <asp:DataList ID="DataList2" runat="server" DataSourceID="SqlDataSource2" RepeatDirection="Horizontal" RepeatLayout="Flow" >
 					<ItemTemplate>
-						<asp:Image ID="Image2" runat="server" CssClass="fill" ImageURL='<%# Eval("Image") %>'/>
+						<asp:Image ID="Image2" runat="server" Height="300px" CssClass="center-block" ImageURL='<%# Eval("Image") %>'/>
 						<h2>
 							<asp:Label ID="Label2" CssClass="carousel-caption" runat="server" Text='<%# Eval("Model") %>'></asp:Label>
 						</h2>
@@ -41,7 +41,7 @@
             <div class="item">
                 <asp:DataList ID="DataList3" runat="server" DataSourceID="SqlDataSource3" RepeatDirection="Horizontal" RepeatLayout="Flow" >
 					<ItemTemplate>
-						<asp:Image ID="Image3" runat="server" CssClass="fill" ImageURL='<%# Eval("Image") %>'/>
+						<asp:Image ID="Image3" runat="server" Height="300px" CssClass="center-block" ImageURL='<%# Eval("Image") %>'/>
 						<h2>
 							<asp:Label ID="Label3" CssClass="carousel-caption" runat="server" Text='<%# Eval("Model") %>'></asp:Label>
 						</h2>
