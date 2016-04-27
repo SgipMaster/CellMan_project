@@ -61,7 +61,7 @@
 
     <!-- Page Content -->
     <div class="container">
-		<div class="row">
+		<div class="row ">
             <div class="col-lg-12">
                 <h2 class="page-header">Services</h2>
             </div>
@@ -92,21 +92,6 @@
                         <h4>Sell Phones</h4>
                         <p>Ready for something new and exciting? Sell us your old phone!</p>
                         <a href="Sell-Device.aspx" class="btn btn-primary">Learn More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="panel panel-default text-center">
-                    <div class="panel-heading">
-                        <span class="fa-stack fa-5x">
-                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                              <i class="fa fa-support fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </div>
-                    <div class="panel-body">
-                        <h4>Repair Phones</h4>
-                        <p>Broken screen? Broken charger port? Let us fix it for you!</p>
-                        <a href="Repair-Request.aspx" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
             </div>

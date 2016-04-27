@@ -42,11 +42,8 @@
 						<h3>Phone Specifications</h3>
 						<ul>
 							<li>
-								<asp:Label ID="Label1" runat="server" Text='<%# Bind("Storage") %>' ></asp:Label>GB
+								<asp:Label ID="Label1" runat="server" Text='<%# Bind("Storage", "{0} GB" ) %>' ></asp:Label>
 							</li>
-							<li>Dolor Sit Amet</li>
-							<li>Consectetur</li>
-							<li>Adipiscing Elit</li>
 						</ul>
 					</div>
 				</ItemTemplate>
@@ -55,39 +52,6 @@
         </div>
         <!-- /.row -->
 
-        <!-- Related Projects Row -->
-        <div class="row">
-
-            <div class="col-lg-12">
-                <h3 class="page-header">Related Projects</h3>
-            </div>
-
-            <div class="col-sm-3 col-xs-6">
-                <a href="#">
-                    <img class="img-responsive img-hover img-related" src="http://placehold.it/500x300" alt="" />
-                </a>
-            </div>
-
-            <div class="col-sm-3 col-xs-6">
-                <a href="#">
-                    <img class="img-responsive img-hover img-related" src="http://placehold.it/500x300" alt="" />
-                </a>
-            </div>
-
-            <div class="col-sm-3 col-xs-6">
-                <a href="#">
-                    <img class="img-responsive img-hover img-related" src="http://placehold.it/500x300" alt="" />
-                </a>
-            </div>
-
-            <div class="col-sm-3 col-xs-6">
-                <a href="#">
-                    <img class="img-responsive img-hover img-related" src="http://placehold.it/500x300" alt="" />
-                </a>
-            </div>
-
-        </div>
-        <!-- /.row -->
     </div>
     <!-- /.container -->
 
