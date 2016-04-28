@@ -29,7 +29,7 @@
 			<asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" RepeatColumns="3" RepeatLayout="Flow">
 				<ItemTemplate>
 					<div class="col-md-4 img-portfolio">
-						<asp:ImageButton ID="ImageButton1" runat="server" OnClick="ImageButton1_Click" Cssclass="img-responsive img-hover" ImageUrl='<%# Bind("Image") %>' AlternateText='<%# Bind("InventoryID") %>' />
+						<asp:ImageButton ID="ImageButton1" runat="server" OnClick="ImageButton1_Click" Height="300px" Cssclass="img-responsive img-hover" ImageUrl='<%# Bind("Image") %>' AlternateText='<%# Bind("InventoryID") %>' />
 						<h3>
 							<asp:LinkButton ID="LinkButton1" runat="server" CssClass='<%# Bind("InventoryID") %>' OnClick="LinkButton1_Click" Text='<%# Bind("Condition") %>'></asp:LinkButton>
 						</h3>
