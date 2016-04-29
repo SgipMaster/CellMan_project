@@ -21,6 +21,7 @@
 
         <!-- Content Row -->
         <div class="row">
+			<br />
             <!-- Map Column -->
             <div class="col-md-8">
                 <!-- Embedded Google Map -->

@@ -19,6 +19,7 @@
 
         <!-- Content Row -->
         <div class="row">
+			<br />
             <div class="col-lg-12">
                 <div class="panel-group" id="accordion">
                     <div class="panel panel-default">

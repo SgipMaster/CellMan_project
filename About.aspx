@@ -20,6 +20,7 @@
 
         <!-- Intro Content -->
         <div class="row">
+			<br />	
             <div class="col-md-6">
                 <img class="img-responsive" src="images/aboutus.jpg" alt="">
             </div>

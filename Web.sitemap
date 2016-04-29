@@ -10,6 +10,20 @@
 					</siteMapNode>
 				</siteMapNode>
 			</siteMapNode>
+			<siteMapNode url="Type - Sell.aspx" title="Device Type"  description="Device Types">
+				<siteMapNode url="Manufacturer - Sell.aspx" title="Manufacturers" description="Manufacturers Page">
+					<siteMapNode url="Model.aspx - Sell" title="Models" description="Different Models">
+							<siteMapNode url="Phone - Sell.aspx" title="Phone" description="Phone Info" />
+						</siteMapNode>
+					</siteMapNode>
+			</siteMapNode>
+			<siteMapNode url="Type - Repair.aspx" title="Device Type"  description="Device Types">
+				<siteMapNode url="Manufacturer - Repair.aspx" title="Manufacturers" description="Manufacturers Page">
+					<siteMapNode url="Model - Repair.aspx" title="Models" description="Different Models">
+							<siteMapNode url="Phone - Repair.aspx" title="Phone" description="Phone Info" />
+						</siteMapNode>
+					</siteMapNode>
+			</siteMapNode>
       <siteMapNode url="Login.aspx" title="Login"  description="Login Page">
 				<siteMapNode url="newuser.aspx" title="Create User" desciption="Create a new user" />
 				<siteMapNode url="forgotpassword.aspx" title="Forgot Password" desciption="Recover users password" />
