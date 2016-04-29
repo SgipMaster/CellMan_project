@@ -1,27 +1,20 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Phone - Sell.aspx.cs" Inherits="Phone" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Phone - Repair.aspx.cs" Inherits="Phone" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <title>Cell Man-Phones</title>
+	<title>Cell Man-Phones</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-        <!-- Page Content -->
+	    <!-- Page Content -->
     <div class="container">
 
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">Phone Info
-					<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT Image, Storage FROM Device WHERE DeviceID = @mod" InsertCommand="INSERT INTO [Inventory] ([DeviceID], [Conditionl], [CalculatedPrice], [AddDate], [Image]) VALUES (@DeviceID, @Condition, @CalculatedPrice, @AddDate, @image)">
-					    <InsertParameters>
-                            <asp:Parameter Name="DeviceID" />
-                            <asp:Parameter Name="Condition" />
-                            <asp:Parameter Name="CalculatedPrice" />
-                            <asp:Parameter Name="AddDate" />
-                            <asp:Parameter Name="image" Type="String" />
-                        </InsertParameters>
-                        <SelectParameters>
-                            <asp:SessionParameter Name="mod" SessionField="Model" />
-                        </SelectParameters>
+					<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT Inventory.Image , Storage FROM Inventory JOIN Device ON Inventory.DeviceID = Device.DeviceID WHERE InventoryID = @inv">
+					<SelectParameters>
+						<asp:SessionParameter Name="inv" SessionField="Inventory" />
+					</SelectParameters>
 					</asp:SqlDataSource>
 				</h1>
 				<asp:SiteMapPath CssClass="breadcrumb" ID="SiteMapPath1" runat="server"></asp:SiteMapPath>

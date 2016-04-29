@@ -91,7 +91,7 @@
                     <div class="panel-body">
                         <h4>Sell Phones</h4>
                         <p>Ready for something new and exciting? Sell us your old phone!</p>
-                        <a href="Sell-Device.aspx" class="btn btn-primary">Learn More</a>
+                        <a href="Type - Sell.aspx" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -106,7 +106,7 @@
                     <div class="panel-body">
                         <h4>Buy Parts</h4>
                         <p>Feeling up for the job? Buy parts and fix it yourself!</p>
-                        <a href="#" class="btn btn-primary">Learn More</a>
+                        <a href="Type - Repair.aspx" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
             </div>
