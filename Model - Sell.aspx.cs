@@ -14,7 +14,7 @@ public partial class Inventory : System.Web.UI.Page
 		protected void LinkButton1_Click(object sender, EventArgs e)
 	{
 		LinkButton clicked = sender as LinkButton;
-		Session["Model"] = clicked.Text;
+		Session["Model"] = clicked.ToolTip.ToString();
 		Response.Redirect("Phone - Sell.aspx");
 	}
 
