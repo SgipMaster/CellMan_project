@@ -12,7 +12,7 @@
 			</siteMapNode>
 			<siteMapNode url="Type - Sell.aspx" title="Device Type"  description="Device Types">
 				<siteMapNode url="Manufacturer - Sell.aspx" title="Manufacturers" description="Manufacturers Page">
-					<siteMapNode url="Model.aspx - Sell" title="Models" description="Different Models">
+					<siteMapNode url="Model - Sell.aspx" title="Models" description="Different Models">
 							<siteMapNode url="Phone - Sell.aspx" title="Phone" description="Phone Info" />
 						</siteMapNode>
 					</siteMapNode>
