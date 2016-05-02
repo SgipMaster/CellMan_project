@@ -29,7 +29,6 @@ public partial class SellItem : System.Web.UI.UserControl
 	{
 		if (FileUpload1.PostedFile.FileName == "")
 		{
-			Label2.Text = "No file specified";
 			return;
 		}
 		else
@@ -65,7 +64,6 @@ public partial class SellItem : System.Web.UI.UserControl
 
 		if (Session["Model"].ToString() == "" || Session["BasePrice"].ToString() == "")
 		{
-			Label2.Text = "Records require an ID, first name, and last name.";
 			return;
 		}
 
@@ -79,7 +77,7 @@ public partial class SellItem : System.Web.UI.UserControl
 		SqlCommand cmd = new SqlCommand(insertSQL, con);
 
 		cmd.Parameters.AddWithValue("@DeviceID", Session["Model"].ToString());
-		cmd.Parameters.AddWithValue("@Condition", DropDownList1.SelectedValue.ToString());
+		cmd.Parameters.AddWithValue("@Condition", DropDownList1.SelectedItem.Text);
 		cmd.Parameters.AddWithValue("@CalculatedPrice", Convert.ToDouble(Session["BasePrice"].ToString()) * 2.3);
 		cmd.Parameters.AddWithValue("@AddDate", DateTime.Now);
 		cmd.Parameters.AddWithValue("@Image", Path.Combine("~/images/", Path.GetFileName(FileUpload1.PostedFile.FileName)));
@@ -93,7 +91,7 @@ public partial class SellItem : System.Web.UI.UserControl
 		}
 		catch (Exception err)
 		{
-			Label2.Text = "Error Selling.";
+			
 		}
 		finally
 		{
