@@ -23,6 +23,8 @@
         <div class="row">
 			<br />
             <!-- Map Column -->
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [DeviceType], [Model] FROM [Device]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT DISTINCT TypeName FROM DeviceType"></asp:SqlDataSource>
             <div class="col-md-8">
                 <!-- Embedded Google Map -->
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2976.8673178912713!2d-111.83678854875173!3d41.744954679130984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87547de0c0154d97%3A0x2b181550d77bb3e1!2s718+N+Main+St%2C+Logan%2C+UT+84321!5e0!3m2!1sen!2sus!4v1458726829489" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -86,10 +88,16 @@
                     <div class="control-group form-group">
                         <div class="controls">
                             <label>Message:</label>
-                            <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+                            <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none">Unbound</textarea>
                         </div>
                     </div>
-                    <div id="success"></div>
+                    <div id="success">
+                            <label>Device Type:</label><asp:RadioButtonList ID="RadioButtonList2" runat="server" DataSourceID="SqlDataSource2" DataTextField="TypeName" DataValueField="TypeName">
+                        </asp:RadioButtonList>
+                            <label>Model:</label><br />
+                        <asp:ListBox ID="ListBox3" runat="server" DataSourceID="SqlDataSource1" DataTextField="Model" DataValueField="Model"></asp:ListBox>
+                        <br />
+                    </div>
                     <!-- For success/fail messages -->
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>

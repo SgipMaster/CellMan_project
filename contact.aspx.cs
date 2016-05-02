@@ -11,4 +11,9 @@ public partial class Contact : System.Web.UI.Page
 	{
 
 	}
+
+    protected void RadioButtonList2_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+    }
 }
