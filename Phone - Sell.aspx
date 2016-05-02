@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Phone - Sell.aspx.cs" Inherits="Phone" %>
 
+<%@ Register Src="~/SellItem.ascx" TagPrefix="uc1" TagName="SellItem" %>
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <title>Cell Man-Phones</title>
 </asp:Content>
@@ -56,21 +59,7 @@
 				</ItemTemplate>
 			</asp:DataList>
 			<br />
-			<asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
-				<asp:ListItem Selected="True" Value="Condition">Select Condition</asp:ListItem>
-				<asp:ListItem>Poor</asp:ListItem>
-				<asp:ListItem>Fair</asp:ListItem>
-				<asp:ListItem>Perfect</asp:ListItem>
-			</asp:DropDownList>
-			<asp:RequiredFieldValidator ID="RequiredFieldValidator1" Display="Dynamic" ControlToValidate="DropDownList1" runat="server" Text="*" ErrorMessage="Please Select a Condition" ValidationGroup="Sell" InitialValue="Condition"></asp:RequiredFieldValidator>
-			<br />
-			<asp:FileUpload ID="FileUpload1" runat="server" />
-			<asp:RequiredFieldValidator ID="RequiredFieldValidator2" Display="Dynamic" ControlToValidate="FileUpload1" runat="server" Text="*" ErrorMessage="Please Load an Image" ValidationGroup="Sell"></asp:RequiredFieldValidator>
-			<br />		
-			<asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" Text="Sell" OnClick="Button1_Click" />
-			<br />
-			<asp:Label ID="Label2" runat="server" ></asp:Label>
-        	<asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="Sell" />
+			<uc1:SellItem runat="server" ID="SellItem" />
         </div>
         <!-- /.row -->
 
