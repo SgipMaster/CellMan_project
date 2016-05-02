@@ -19,6 +19,7 @@ public partial class SellItem : System.Web.UI.UserControl
 
 	protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
 	{
+		//puts user selection into a session variable
 		if (DropDownList1.SelectedIndex != 0)
 		{
 			Session["Condition"] = DropDownList1.SelectedValue.ToString();
@@ -27,41 +28,37 @@ public partial class SellItem : System.Web.UI.UserControl
 
 	protected void Button1_Click(object sender, EventArgs e)
 	{
-		if (FileUpload1.PostedFile.FileName == "")
+		//check the extention
+		string extention = Path.GetExtension(FileUpload1.PostedFile.FileName);
+
+		switch (extention.ToLower())
 		{
-			return;
-		}
-		else
-		{
-			//check the extention
-			string extention = Path.GetExtension(FileUpload1.PostedFile.FileName);
-
-			switch (extention.ToLower())
-			{
-				case ".png":
-				case ".jpeg":
-				case ".jpg":
-					break;
-				default:
-					Label2.Text = "This file type is not allowed.";
-					return;
-			}
-
-			//Using this code, the saced file will retain its original file name when it's placed on the server
-			string serverFileName = Path.GetFileName(FileUpload1.PostedFile.FileName);
-			string mapPath = Server.MapPath("~/images");
-			string fullUploadPath = Path.Combine(mapPath, serverFileName);
-
-			try
-			{
-				FileUpload1.PostedFile.SaveAs(fullUploadPath);
-			}
-			catch (Exception err)
-			{
-				Label2.Text = err.Message;
-			}
+			case ".png":
+			case ".jpeg":
+			case ".jpg":
+				break;
+			default:
+				Label2.Text = "This file type is not allowed.";
+				return;
 		}
 
+		//Using this code, the saved file will retain its original file name when it's placed on the server
+		string serverFileName = Path.GetFileName(FileUpload1.PostedFile.FileName);
+		string mapPath = Server.MapPath("~/images");
+		string fullUploadPath = Path.Combine(mapPath, serverFileName);
+
+		//try to upload the file
+		try
+		{
+			FileUpload1.PostedFile.SaveAs(fullUploadPath);
+		}
+		catch (Exception err)
+		{
+			Label2.Text = err.Message;
+		}
+
+
+		//insert new device into database
 		if (Session["Model"].ToString() == "" || Session["BasePrice"].ToString() == "")
 		{
 			return;

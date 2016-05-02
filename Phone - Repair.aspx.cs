@@ -17,6 +17,8 @@ public partial class Phone : System.Web.UI.Page
 
     protected void CheckBoxList1_SelectedIndexChanged(object sender, EventArgs e)
     {
+		//Create list of selected item and then calculates total price
+		//puts total price into label text
         List<ListItem> Selected = new List<ListItem>();
         double count = 0;
         foreach (ListItem item in CheckBoxList1.Items)

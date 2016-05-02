@@ -26,11 +26,11 @@
 			</siteMapNode>
       <siteMapNode url="Login.aspx" title="Login"  description="Login Page">
 				<siteMapNode url="newuser.aspx" title="Create User" desciption="Create a new user" />
+				<siteMapNode url="ChangePassword.aspx" title="Change Password" desciption="Change a users password" />
 				<siteMapNode url="forgotpassword.aspx" title="Forgot Password" desciption="Recover users password" />
 			</siteMapNode>
 			<siteMapNode url="faq.aspx" title="FAQ"  description="FAQ" />
 			<siteMapNode url="About.aspx" title="About"  description="About Us" />
 			<siteMapNode url="Contact.aspx" title="Contact"  description="Contact Us" />
-			<siteMapNode url="Sell-Device.aspx" title="Sell Device"  description="Sell a Device" />
     </siteMapNode>
 </siteMap>
