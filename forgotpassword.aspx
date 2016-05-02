@@ -15,7 +15,8 @@
         </div>
         <!-- /.row -->
 		 <br />
-		 <asp:PasswordRecovery ID="PasswordRecovery1" runat="server"></asp:PasswordRecovery>
+		 <asp:PasswordRecovery ID="PasswordRecovery1" runat="server" OnSendingMail="PasswordRecovery1_SendingMail">
+		</asp:PasswordRecovery>
 	</div>
 </asp:Content>
 
