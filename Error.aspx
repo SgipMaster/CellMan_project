@@ -6,9 +6,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 	<div id="div1">
 		<br />
-		<h1>:(</h1>
-		<h4>Oh no something broke!</h4>
-		<h6>We have gathered all of your browser history, cache, cookies, saved passwords, and form data that is now being sent to our secure datacenter for processing. It will "help" us figure out what you did to our site.</h6>
+		<asp:Panel ID="Panel1" runat="server">
+			<h1>:(</h1>
+			<h4>Oh no something broke!</h4>
+			<h6>We have gathered all of your browser history, cache, cookies, saved passwords, and form data that is now being sent to our secure datacenter for processing. It will "help" us figure out what you did to our site.</h6>
+		</asp:Panel>
 	</div>
 </asp:Content>
 
