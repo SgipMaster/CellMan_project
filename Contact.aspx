@@ -65,28 +65,34 @@
                 <form name="sentMessage" id="contactForm" novalidate>
                     <div class="control-group form-group">
                         <div class="controls">
-                            <label>Full Name:</label>
-                            <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
-                            <p class="help-block"></p>
+                            &nbsp;<asp:Label ID="Label1" runat="server" Text="Name"></asp:Label>
+                &nbsp;<p class="help-block">
+                                <asp:TextBox ID="TextBox1" runat="server" Height="33px" Width="1459px"></asp:TextBox>
+                            </p>
                         </div>
                     </div>
                     <div class="control-group form-group">
                         <div class="controls">
-                            <label>Phone Number:</label>
-                            <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
-                        </div>
+                            <asp:Label ID="Label2" runat="server" Text="Email"></asp:Label>
+                            </label>
+                            &nbsp;<asp:TextBox ID="TextBox2" runat="server" Height="33px" Width="1459px"></asp:TextBox>
+&nbsp;</div>
                     </div>
                     <div class="control-group form-group">
                         <div class="controls">
-                            <label>Email Address:</label>
-                            <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
+                                &nbsp;<asp:Label ID="Label3" runat="server" Text="Age Group"></asp:Label>
+                                <asp:RadioButtonList ID="RadioButtonList1" runat="server">
+                                    <asp:ListItem>0-17</asp:ListItem>
+                                    <asp:ListItem>18-30</asp:ListItem>
+                                    <asp:ListItem>30+</asp:ListItem>
+                            </asp:RadioButtonList>
                         </div>
                     </div>
                     <div class="control-group form-group">
                         <div class="controls">
                             <label>Message:</label>
-                            <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
-                        </div>
+                            <asp:TextBox ID="TextBox4" runat="server" Height="161px" Width="1457px"></asp:TextBox>
+                            &nbsp;</div>
                     </div>
                     <div id="success"></div>
                     <!-- For success/fail messages -->
