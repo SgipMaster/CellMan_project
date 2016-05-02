@@ -15,10 +15,7 @@
         </div>
         <!-- /.row -->
 		 <br />
-		 <asp:PasswordRecovery ID="PasswordRecovery1" runat="server">
-			 <MailDefinition From="no-reply@cellman.com" Subject="Recover Password">
-			 </MailDefinition>
-		</asp:PasswordRecovery>
+		 <asp:PasswordRecovery ID="PasswordRecovery1" runat="server"></asp:PasswordRecovery>
 	</div>
 </asp:Content>
 
