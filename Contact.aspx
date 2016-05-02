@@ -4,7 +4,7 @@
 	<title>Cell Man-Contact</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-	  <!-- Page Content -->
+  <!-- Page Content -->
     <div class="container">
 
         <!-- Page Heading/Breadcrumbs -->
@@ -31,7 +31,7 @@
             <div class="col-md-4">
                 <h3>Contact Details</h3>
                 <p>
-                    718 N Main St<br />Logan, UT 84341<br />
+                    718 N Main St<br>Logan, UT 84341<br>
                 </p>
                 <p><i class="fa fa-phone"></i> 
                     <abbr title="Phone">Phone</abbr>: (435) 512-7890</p>
@@ -66,34 +66,28 @@
                 <form name="sentMessage" id="contactForm" novalidate>
                     <div class="control-group form-group">
                         <div class="controls">
-                            &nbsp;<asp:Label ID="Label1" runat="server" Text="Name"></asp:Label>
-                &nbsp;<p class="help-block">
-                                <asp:TextBox ID="TextBox1" runat="server" Height="33px" Width="1459px"></asp:TextBox>
-                            </p>
+                            <label>Full Name:</label>
+                            <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
+                            <p class="help-block"></p>
                         </div>
                     </div>
                     <div class="control-group form-group">
                         <div class="controls">
-                            <asp:Label ID="Label2" runat="server" Text="Email"></asp:Label>
-                            </label>
-                            &nbsp;<asp:TextBox ID="TextBox2" runat="server" Height="33px" Width="1459px"></asp:TextBox>
-&nbsp;</div>
+                            <label>Phone Number:</label>
+                            <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
+                        </div>
                     </div>
                     <div class="control-group form-group">
                         <div class="controls">
-                                &nbsp;<asp:Label ID="Label3" runat="server" Text="Age Group"></asp:Label>
-                                <asp:RadioButtonList ID="RadioButtonList1" runat="server">
-                                    <asp:ListItem>0-17</asp:ListItem>
-                                    <asp:ListItem>18-30</asp:ListItem>
-                                    <asp:ListItem>30+</asp:ListItem>
-                            </asp:RadioButtonList>
+                            <label>Email Address:</label>
+                            <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
                         </div>
                     </div>
                     <div class="control-group form-group">
                         <div class="controls">
                             <label>Message:</label>
-                            <asp:TextBox ID="TextBox4" runat="server" Height="161px" Width="1457px"></asp:TextBox>
-                            &nbsp;</div>
+                            <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+                        </div>
                     </div>
                     <div id="success"></div>
                     <!-- For success/fail messages -->
@@ -114,4 +108,3 @@
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
 </asp:Content>
-
