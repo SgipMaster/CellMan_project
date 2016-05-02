@@ -34,7 +34,7 @@
                     718 N Main St<br>Logan, UT 84341<br>
                 </p>
                 <p><i class="fa fa-phone"></i> 
-                    <abbr title="Phone">Phone</abbr>: (435) 512-7890</p>
+                    <abbr title="Phone">Phone</abbr>: 1 (800) CellMan</p>
                 <p><i class="fa fa-envelope-o"></i> 
                     <abbr title="Email">E-Mail</abbr>: <a href="mailto:support@cellmen.com">Support@CellMen.com</a>
                 </p>
