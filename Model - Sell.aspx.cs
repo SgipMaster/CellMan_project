@@ -14,7 +14,8 @@ public partial class Inventory : System.Web.UI.Page
 		protected void LinkButton1_Click(object sender, EventArgs e)
 	{
 		LinkButton clicked = sender as LinkButton;
-		Session["Model"] = clicked.Text;
+		Session["Model"] = clicked.ToolTip.ToString();
+		Session["BasePrice"] = clicked.ValidationGroup;
 		Response.Redirect("Phone - Sell.aspx");
 	}
 
@@ -22,6 +23,7 @@ public partial class Inventory : System.Web.UI.Page
 	{
 		ImageButton clicked = sender as ImageButton;
 		Session["Model"] = clicked.AlternateText;
+		Session["BasePrice"] = clicked.ToolTip.ToString();
 		Response.Redirect("Phone - Sell.aspx");
 	}
 }

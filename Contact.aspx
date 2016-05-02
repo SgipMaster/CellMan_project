@@ -21,6 +21,7 @@
 
         <!-- Content Row -->
         <div class="row">
+			<br />
             <!-- Map Column -->
             <div class="col-md-8">
                 <!-- Embedded Google Map -->
@@ -30,7 +31,7 @@
             <div class="col-md-4">
                 <h3>Contact Details</h3>
                 <p>
-                    718 N Main St<br>Logan, UT 84341<br>
+                    718 N Main St<br />Logan, UT 84341<br />
                 </p>
                 <p><i class="fa fa-phone"></i> 
                     <abbr title="Phone">Phone</abbr>: (435) 512-7890</p>
