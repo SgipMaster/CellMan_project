@@ -18,6 +18,7 @@
         <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="WITH inv AS ( SELECT ROW_NUMBER() OVER (ORDER BY AddDate DESC) AS RowNumber, Inventory.Image, Model FROM Inventory JOIN Device ON Inventory.DeviceID = Device.DeviceID WHERE Condition = 'Perfect') SELECT Image, Model FROM inv WHERE RowNumber = 3"></asp:SqlDataSource>
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
+			<!-- Carousel Image 1 -->
             <div class="item active">
 				<asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" RepeatDirection="Horizontal" RepeatLayout="Flow" >
 					<ItemTemplate>
@@ -28,6 +29,7 @@
 					</ItemTemplate>
 				</asp:DataList>
             </div>
+			<!-- Carousel Image 2 -->
             <div class="item">
                 <asp:DataList ID="DataList2" runat="server" DataSourceID="SqlDataSource2" RepeatDirection="Horizontal" RepeatLayout="Flow" >
 					<ItemTemplate>
@@ -38,6 +40,7 @@
 					</ItemTemplate>
 				</asp:DataList>
             </div>
+			<!-- Carousel Image 3 -->
             <div class="item">
                 <asp:DataList ID="DataList3" runat="server" DataSourceID="SqlDataSource3" RepeatDirection="Horizontal" RepeatLayout="Flow" >
 					<ItemTemplate>
@@ -65,6 +68,7 @@
             <div class="col-lg-12">
                 <h2 class="page-header">Services</h2>
             </div>
+			<!-- Buying Service -->
             <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
@@ -80,6 +84,7 @@
                     </div>
                 </div>
             </div>
+			<!-- Selling Service -->
             <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
@@ -95,6 +100,7 @@
                     </div>
                 </div>
             </div>
+			<!-- Parts Service -->
             <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">

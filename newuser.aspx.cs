@@ -15,6 +15,7 @@ public partial class newuser : System.Web.UI.Page
 
 	protected void CreateUserWizard1_CreatedUser(object sender, EventArgs e)
 	{
+		//Add new user to User role
 		Roles.AddUserToRole(CreateUserWizard1.UserName, "User");
 	}
 }

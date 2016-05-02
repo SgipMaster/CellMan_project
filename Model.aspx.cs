@@ -13,6 +13,7 @@ public partial class Inventory : System.Web.UI.Page
 	}
 		protected void LinkButton1_Click(object sender, EventArgs e)
 	{
+		//Creates session variable to store user selection
 		LinkButton clicked = sender as LinkButton;
 		Session["Model"] = clicked.Text;
 		Response.Redirect("Inventory.aspx");
@@ -20,6 +21,7 @@ public partial class Inventory : System.Web.UI.Page
 
 	protected void ImageButton1_Click(object sender, EventArgs e)
 	{
+		//Creates session variable to store user selection
 		ImageButton clicked = sender as ImageButton;
 		Session["Model"] = clicked.AlternateText;
 		Response.Redirect("Inventory.aspx");
